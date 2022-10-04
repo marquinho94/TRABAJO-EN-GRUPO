@@ -1,0 +1,158 @@
+/* GOOGLE FONTS  */
+
+/* font-family: 'Aboreto', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
+
+ */
+/* varaibles */
+
+:root{ /* globales */
+    
+
+    /* root: tiene mayor especificidad que html, pero en escencia son lo mismo */
+    /* COLORES (a definir, para maquetado uso escala de azules) */
+    --background-color : rgb(156, 155, 252);
+    --sections-color: rgb(36, 32, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-color-ligth: rgb(221, 220, 255);
+    --article-color: #aef6ff;
+}
+
+
+html {
+
+    font-size: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+a{
+    color: beige;
+}
+
+.contenedor{
+    background-color: var(--background-color);
+    min-width: 600px; 
+    max-width: 2400px;
+    margin: 16px auto;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 24px;
+
+    grid-template-areas:"header header header"
+                        "navbar navbar navbar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "footer footer footer";
+
+}
+
+
+.contenedor .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-area: header;
+
+}
+
+
+.contenedor .navbar {
+
+    font-size: 2em;
+
+    background-color: var(--sections-color);
+    color: var(--text-color-ligth);
+    border: 2px;
+    border-radius: 8px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+
+    grid-area: navbar;
+}
+
+.contenedor .contenido {
+
+    display: flex;
+/*     flex-direction: column;
+    flex-wrap: nowrap; */
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: contenido;
+
+}
+
+.contenedor .contenido .articulo {
+
+    background-color: var(--article-color);
+
+    border: 2px;
+    border-style: dashed;
+    border-radius: 8px;
+
+    border-color: rgb(0, 0, 0);
+
+
+    min-width: 480px;
+  
+    min-height: 200px;
+
+
+
+
+
+}
+
+.contenedor .sidebar {
+
+    background-color: var(--sections-color);
+    border: 2px;
+    border-radius: 8px;
+
+    min-width: 50px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    grid-area: sidebar;
+
+}
+
+
+.contenedor .footer {
+
+    background-color: var(--sections-color);
+    border: 2px;
+    border-radius: 8px;
+    border-color: black;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: footer;
+}
