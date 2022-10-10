@@ -129,13 +129,14 @@ a {
     border-color: rgb(0, 0, 0);
 
 
-    /* min-width: 480px; */
+    
 
     min-height: 200px;
-    /* align-items: stretch; */
+    align-items: stretch;
 
+    min-width: 480px;
     max-width: 640px;
-    /* margin: 12px 24px; */
+    margin: 12px 24px;
     
 
 
@@ -240,19 +241,26 @@ a {
     .contenedor .contenido {
         background-color: var(--sections-color);
          
-        max-width: 1400px;
+        /* max-width: 2400px; */
         display: flex;
         /*     flex-direction: column;
         flex-wrap: nowrap; */
-        flex-flow: column wrap;
+        flex-flow: row wrap;
     
-        /* justify-content: space-evenly; */
-        /* align-items: stretch; */
+        justify-content: space-evenly;
+        align-items: stretch;
     
-        /* gap: 16px 16px; */
+        gap: 16px 16px;
         
     
         grid-area: contenido;
+    }
+
+    .contenedor .contenido .articulo {
+
+        /* min-height: 360px; */
+
+        
     }
 
 } 
