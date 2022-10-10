@@ -110,7 +110,7 @@ a {
     flex-wrap: nowrap; */
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: stretch; /* los articulso deberian ocupar todo el ancho disponible */
     margin: 24px 24px;
 
     gap: 24px 24px;
@@ -131,12 +131,15 @@ a {
 
     
 
-    min-height: 200px;
+    /* min-height: 200px; */
     align-items: stretch;
 
-    min-width: 480px;
-    max-width: 640px;
+    /* min-width: 480px; */
+    /* max-width: 640px; */
     margin: 12px 24px;
+
+    /* flex basis actua sobre el height porque estamos en flex-direction: column; */
+    flex: 0 0 240px;
     
 
 
@@ -151,7 +154,7 @@ a {
     border: 2px;
     border-radius: 8px;
 
-    min-width: 50px;
+    min-width: 80px;
     /* min-height: 80vh; */
     display: flex;
     justify-content: stretch;
@@ -248,7 +251,7 @@ a {
         flex-flow: row wrap;
     
         justify-content: space-evenly;
-        align-items: stretch;
+        align-content: stretch;
     
         gap: 16px 16px;
         
@@ -258,7 +261,14 @@ a {
 
     .contenedor .contenido .articulo {
 
-        /* min-height: 360px; */
+        min-height: 240px;
+
+        /* flex-basis: actua sobre el width porque estamos en row; */
+        /* flex-basis: 640px;
+
+        flex-grow: 1; */
+
+        flex: 1 0 640px;
 
         
     }
