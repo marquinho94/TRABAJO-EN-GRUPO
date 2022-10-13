@@ -14,20 +14,27 @@ font-family: 'Roboto', sans-serif;
     /* root: tiene mayor especificidad que html, pero en escencia son lo mismo */
     /* COLORES (a definir, para maquetado uso escala de azules) */
     --background-color: rgb(156, 155, 252);
+
     --sections-color: rgb(36, 32, 255);
     --text-color: rgb(0, 0, 0);
     --text-color-ligth: rgb(221, 220, 255);
     --article-color: #aef6ff;
+
     --btn-color: #2f009c;
     --btn-color-hoover:#7d009c;
+
 }
 
 
 html {
 
-    font-size: 8px;
+
+    font-size: 62.5%; 
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
+    height: 100vh;
+    width: 100vw;
+
 }
 
 * {
@@ -37,6 +44,7 @@ html {
 
 }
 
+
 a {
     color: beige;
 }
@@ -44,9 +52,29 @@ a {
 .contenedor {
     background-color: var(--background-color);
     min-width: 600px;
+
     max-width: 2400px;
     margin: 16px auto;
     display: grid;
+
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 24px;
+
+    grid-template-areas:"header header header"
+                        "navbar navbar navbar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "contenido contenido sidebar"
+                        "footer footer footer";
+
+}
+
+
 
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(9, auto);
@@ -76,14 +104,6 @@ a {
 
 
 
-.contenedor .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    grid-area: header;
-
-}
 
 
 .contenedor .navbar {
@@ -97,11 +117,9 @@ a {
 
 
     display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-evenly;
-    flex: auto;
-
+    
 
 
     grid-area: navbar;
@@ -142,6 +160,7 @@ a {
     gap: 24px 24px;
 
     grid-area: contenido;
+
 }
 
 .contenedor .contenido .articulo {
@@ -166,7 +185,7 @@ a {
 
     /* flex basis actua sobre el height porque estamos en flex-direction: column; */
     flex: 0 0 240px;
-    
+
 
 
 
@@ -180,11 +199,13 @@ a {
     border: 2px;
     border-radius: 8px;
 
-    min-width: 80px;
-    /* min-height: 80vh; */
-    display: flex;
-    justify-content: stretch;
-    align-items: flex-start;
+
+    min-width: 50px;
+    min-height: 80vh;
+    display:block;
+    justify-content: center;
+    align-items:center;
+
 
 
     grid-area: sidebar;
@@ -204,9 +225,109 @@ a {
     align-items: center;
     justify-content: center;
 
+    font-size: 25px;
+
     grid-area: footer;
 }
 
+
+.contenedor-iframe{
+    /*box-sizing: border-box;*/
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    height: 35%;
+    width: 80%;
+    align-items: baseline;
+    margin: auto;
+    
+}
+
+.responsive-iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-color:  #aef6ff;
+  border-style: double;
+  border: 2 rem;
+}
+
+.encabezado {
+    font-size: 30px;
+    font-family: 'Roboto', cursive;
+    margin-top: 5px;
+    animation-name:Colores;
+    animation-duration: 5s; 
+    animation-iteration-count:infinite;
+}
+
+@keyframes Colores{
+    0%{color: blue}
+    50%{color: lightseagreen}
+    100%{color: lightskyblue}
+  }
+
+ 
+a:hover {
+    color: rgb(13, 37, 51);
+    transition: 0.8s;
+}
+
+.table{
+    border: solid navy;
+
+}
+
+.contacto{
+    text-align: center;
+    font-size: 5vh;
+    color: black;
+
+}
+
+input{
+    width: 300px;
+    height: 25px;
+    border: double blue;
+}
+
+textarea{
+   width: 300px;
+   height: 250px;
+   border: double blue;
+}
+
+fieldset{
+   border: 3px solid black;
+   width: 450px;
+   margin:auto;
+   text-align: center;
+ }
+
+ .boton {
+   color: white;
+   font-size: 20px;
+   font-weight: 500;
+   padding: 0.5em 1.2em;
+   background: rgb(141, 10, 97);
+   border: 2px solid;
+   border-radius: 1rem;
+   border-color: #318aac;
+   position: relative;
+   bottom: 15px;
+ }
+
+ .boton:hover {
+   color: white;
+   box-shadow: 0 5px 15px rgba(49, 138, 172, 1);
+   transition: all 0.1s ease;
+   cursor: pointer;
+ }
 
 
 /* 
@@ -217,6 +338,12 @@ a {
 
 /* SMALL ANDROID */
 @media screen and (max-width: 640px) {
+
+    .contenedor-grid {
+        display: grid;
+        grid-template-columns: 3fr repeat(2, 1fr);
+        column-gap: 2rem;
+    }
 
     .contenedor {
 
@@ -307,4 +434,4 @@ a {
         
     }
 
-} 
+

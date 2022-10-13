@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Pacifico&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/red-en-la-nube.ico">
+
+
+
+    <title>TP0 Inicial</title>
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/e547f827f8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header encabezado">
+            <!-- <h1>logo?</h1> -->
+            <br>
+            <h1>ENCABEZADO</h1>
+
+        </header>
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Novedades">Novedades</a>
+            <a href="smartphones.html">Smartphones</a>
+            <a href="Computadoras">Computadoras</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="Nosotros">Nosotros</a>
+            <a href="Twitter">Twitter</a>
+            <a href="Facebook">Facebook</a>
+            <a href="Instagram">Instagram</a>
+
+        </div>
+
+        <main class="contenido">
+            <div class="contacto">
+                <h2>CONTÁCTANOS</h2>
+                <p>Nos comunicaremos lo antes posible</p>
+            </div>
+            <div class="table contacto">
+                        <form action="https://formspree.io/f/xpznldek" method="POST">
+                            <label>
+                                <legend>Nombre:</legend>
+                                <br>
+                                <input type="name" name="nombre">
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Apellido:</legend>
+                                <br>
+                                <input type="apellido" name="apellido">
+                            </label>
+                            
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Mail:</legend>
+                                <br>
+                                <input type="email" name="email">
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Mensaje:</legend>
+                                <br>
+                                <textarea name="message"></textarea>
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <button class="boton" type="submit">Enviar</button>
+                            <button class="boton" type="reset">Borrar datos</button>
+
+
+                            <br>
+
+                        </form>
+                    <div>
+
+                        <br>
+
+
+
+
+                </form>
+
+
+
+            </div>
+
+
+        </main>
+
+        <aside class="sidebar">
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis asperiores praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil, exercitationem earum nostrum saepe soluta eveniet.</h1>
+            
+        </aside>
+
+
+        <footer class="footer">
+            <div>
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <br>
+            </div>
+        </footer>
+        
+        <!-- <script>
+            const form = document.querySelector('#form')
+            form.addEventListener('submit', handleSubmit)
+            async function handleSubmit(event){
+                event.preventDefault()
+                const form = new FormData(this)
+                const response = await fetch(this.action, {
+                    method: this.method,
+                    body: form,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                if (response.ok){
+                    this.reset()
+                    alert('Gracias por el contacto, nos comunicaremos pronto')
+                }
+
+            }
+        </script> -->
+
+    </div>
+
+
+
+</body>
+
+
+</html>
